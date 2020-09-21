@@ -13,6 +13,8 @@ function writePassword() {
 prompt( "How many characters would you like your password to contain?")
 confirm("click ok to confirm special characters")
 confirm("click ok to confirm numeric characters")
+confirm("click ok to confirm upper case")
+confirm("click ok to confirm lower case")
 
 function generatePassword(lessPassword, morePassword) {
   if (lessPassword > 8 && morePassword < 129) {
