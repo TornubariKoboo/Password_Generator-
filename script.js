@@ -7,15 +7,19 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
+// Function to get random LowerCase Letters 
 function getRandomLower() {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }
+// Function to get random UpperCase Letters 
 function getRandomUpper() {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
 }
+// Function to get random numbers
 function getRandomNumber() {
   return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
 }
+// Function to get random symbols
 function getRandomSymbol() {
   var symbols = "!@#$%^&*(){}[]=<>/,.";
   return symbols[Math.floor(Math.random() * symbols.length)];
@@ -26,24 +30,20 @@ function generatePassword() {
   var numberCharacter = prompt(
     "How many characters would you like your password to contain?"
   );
+  // While loop to check the amount of number a user puts into the prompt
   while (numberCharacter < 8 || numberCharacter > 129) {
    numberCharacter = prompt("Password needs to be between 8 and 129 characters"); 
   }
-  var amountEntered = ('' + getRandomLower());
+  // for loop 
+  var amountEntered = ''
+  amountEntered = '' += getRandomLower
+  amountEntered = '' += getRandomNumber
+  amountEntered = '' += getRandomUpper
+  amountEntered = '' += getRandomSymbol 
   for (i = 0; i < numberCharacter; i++) {
-    (getRandomLower() + amountEntered);
+    return getRandomLower() + getRandomNumber() + getRandomUpper() + getRandomSymbol();
   }  
-  console.log(amountEntered + getRandomLower)
-
-  
-    // return (
-    //   getRandomLower() 
-    //   getRandomNumber() 
-    //   getRandomUpper() 
-    //   getRandomSymbol()
-    // );
     
-
   // Message to confirm the user is ok with special characters and numeric characters
   confirm("click ok to confirm special characters");
   confirm("click ok to confirm numeric characters");
