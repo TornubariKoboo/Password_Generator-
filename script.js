@@ -34,23 +34,44 @@ function generatePassword() {
   while (numberCharacter < 8 || numberCharacter > 129) {
    numberCharacter = prompt("Password needs to be between 8 and 129 characters"); 
   }
-  // for loop 
+ 
+
+
   var amountEntered = ''
-  amountEntered = '' += getRandomLower
-  amountEntered = '' += getRandomNumber
-  amountEntered = '' += getRandomUpper
-  amountEntered = '' += getRandomSymbol 
   for (i = 0; i < numberCharacter; i++) {
-    return getRandomLower() + getRandomNumber() + getRandomUpper() + getRandomSymbol();
-  }  
+
+    if (amountEntered.length == numberCharacter) {
+      return amountEntered
+    } 
+    amountEntered += getRandomLower()
+    if (amountEntered.length == numberCharacter) {
+      return amountEntered
+    } 
+    amountEntered += getRandomNumber()
+    if (amountEntered.length == numberCharacter) {
+      return amountEntered
+    } 
+    amountEntered += getRandomUpper()
+    if (amountEntered.length == numberCharacter) {
+      return amountEntered
+    } 
+    amountEntered += getRandomSymbol()
+    if (amountEntered.length == numberCharacter) {
+      return amountEntered
+    } 
     
+  }  
+  console.log("right before return of amount")
+  return amountEntered
+    
+}
+
   // Message to confirm the user is ok with special characters and numeric characters
   confirm("click ok to confirm special characters");
   confirm("click ok to confirm numeric characters");
   // Message to confirm the user is ok with lower case and upper case characters
   confirm("click ok to confirm upper case");
   confirm("click ok to confirm lower case");
-}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
