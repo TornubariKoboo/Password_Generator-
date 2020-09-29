@@ -36,7 +36,7 @@ function generatePassword() {
   }
  
 
-
+// For loop to give characters to password 
   var amountEntered = ''
   for (i = 0; i < numberCharacter; i++) {
 
