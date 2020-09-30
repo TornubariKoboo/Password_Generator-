@@ -36,7 +36,7 @@ function generatePassword() {
   }
  
 
-// For loop to give characters to password 
+// For loop to give that right amount of characters to the users
   var amountEntered = ''
   for (i = 0; i < numberCharacter; i++) {
 
@@ -65,7 +65,6 @@ function generatePassword() {
   return amountEntered
     
 }
-
   // Message to confirm the user is ok with special characters and numeric characters
   confirm("click ok to confirm special characters");
   confirm("click ok to confirm numeric characters");
